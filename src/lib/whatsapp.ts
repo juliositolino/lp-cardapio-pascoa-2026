@@ -39,3 +39,8 @@ export function buildWhatsAppUrl(items: CartItem[], notes?: string) {
   const message = buildWhatsAppMessage(items, notes);
   return `https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
 }
+
+export function buildWhatsAppQuestionUrl() {
+  const message = "Ola! Tenho uma duvida sobre o cardapio especial de Pascoa.";
+  return `https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
+}

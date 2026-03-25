@@ -13,7 +13,7 @@ import { SectionHeader } from "@/components/section-header";
 import { SITE_CONFIG } from "@/data/config";
 import { menuCategories, menuProducts } from "@/data/menu";
 import { useCart } from "@/hooks/use-cart";
-import { buildWhatsAppUrl } from "@/lib/whatsapp";
+import { buildWhatsAppQuestionUrl, buildWhatsAppUrl } from "@/lib/whatsapp";
 
 export default function HomePage() {
   const {
@@ -49,6 +49,10 @@ export default function HomePage() {
     window.open(buildWhatsAppUrl(items, notes), "_blank", "noopener,noreferrer");
   }
 
+  function handleQuestion() {
+    window.open(buildWhatsAppQuestionUrl(), "_blank", "noopener,noreferrer");
+  }
+
   function handleOpenCart() {
     setIsCartOpen(true);
   }
@@ -63,6 +67,7 @@ export default function HomePage() {
         itemCount={totalItems}
         onOpenCart={handleOpenCart}
         onCheckout={handleCheckout}
+        onQuestion={handleQuestion}
         canCheckout={items.length > 0}
       />
       <MenuBanner />
@@ -159,6 +164,7 @@ export default function HomePage() {
         subtotal={subtotal}
         onOpen={() => setIsCartOpen(true)}
         onCheckout={handleCheckout}
+        onQuestion={handleQuestion}
       />
     </main>
   );
