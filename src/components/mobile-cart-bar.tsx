@@ -3,19 +3,22 @@
 import { MessageCircleMore, ShoppingBag } from "lucide-react";
 
 import { formatCurrency } from "@/lib/utils";
+import { WhatsAppIcon } from "@/components/whatsapp-icon";
 
 type MobileCartBarProps = {
   totalItems: number;
   subtotal: number;
   onOpen: () => void;
   onCheckout: () => void;
+  onQuestion: () => void;
 };
 
 export function MobileCartBar({
   totalItems,
   subtotal,
   onOpen,
-  onCheckout
+  onCheckout,
+  onQuestion
 }: MobileCartBarProps) {
   if (totalItems === 0) {
     return null;
@@ -23,7 +26,7 @@ export function MobileCartBar({
 
   return (
     <div className="fixed inset-x-4 bottom-4 z-30 lg:hidden">
-      <div className="flex items-center gap-3 rounded-full border border-white/10 bg-[rgba(7,18,31,0.96)] p-2 shadow-[0_18px_40px_rgba(0,0,0,0.35)] backdrop-blur-xl">
+      <div className="flex items-center gap-2 rounded-full border border-white/10 bg-[rgba(7,18,31,0.96)] p-2 shadow-[0_18px_40px_rgba(0,0,0,0.35)] backdrop-blur-xl">
         <button
           type="button"
           onClick={onOpen}
@@ -36,6 +39,14 @@ export function MobileCartBar({
           <p className="text-[11px] text-slate-500">Total</p>
           <p className="text-sm font-semibold text-white">{formatCurrency(subtotal)}</p>
         </div>
+        <button
+          type="button"
+          onClick={onQuestion}
+          className="inline-flex items-center gap-1.5 rounded-full border border-white/10 px-3 py-3 text-xs font-medium text-white"
+        >
+          <WhatsAppIcon className="h-3.5 w-3.5 text-[#25D366]" />
+          Dúvida?
+        </button>
         <button
           type="button"
           onClick={onCheckout}

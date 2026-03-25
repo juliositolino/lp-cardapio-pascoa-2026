@@ -4,11 +4,13 @@ import Image from "next/image";
 import { ClipboardList, MessageCircleMore } from "lucide-react";
 
 import { SITE_CONFIG } from "@/data/config";
+import { WhatsAppIcon } from "@/components/whatsapp-icon";
 
 type HeaderProps = {
   itemCount: number;
   onOpenCart: () => void;
   onCheckout: () => void;
+  onQuestion: () => void;
   canCheckout: boolean;
 };
 
@@ -16,6 +18,7 @@ export function Header({
   itemCount,
   onOpenCart,
   onCheckout,
+  onQuestion,
   canCheckout
 }: HeaderProps) {
   return (
@@ -40,6 +43,14 @@ export function Header({
         </div>
 
         <div className="flex shrink-0 items-center gap-2">
+          <button
+            type="button"
+            onClick={onQuestion}
+            className="hidden items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm font-medium text-white transition hover:bg-white/10 sm:inline-flex"
+          >
+            <WhatsAppIcon className="h-4 w-4 text-[#25D366]" />
+            Tirar dúvida
+          </button>
           <button
             type="button"
             onClick={onOpenCart}
