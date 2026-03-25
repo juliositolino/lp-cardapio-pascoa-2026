@@ -47,6 +47,45 @@ export const menuCategories: MenuCategory[] = [
 
 export const menuProducts: MenuProduct[] = [
   createProduct({
+    id: "bacalhau-a-moda",
+    name: "Bacalhau à Moda",
+    category: "pratos-principais",
+    subcategory: "Bacalhau",
+    description: "Preparação clássica da Navio.",
+    image: "/Fotos/Bacalhau à moda.JPG",
+    variations: createVariations("bacalhau-a-moda", [
+      { label: "P", price: 280 },
+      { label: "M", price: 480 },
+      { label: "G", price: 880 }
+    ])
+  }),
+  createProduct({
+    id: "bacalhau-nas-natas",
+    name: "Bacalhau de Natas",
+    category: "pratos-principais",
+    subcategory: "Bacalhau",
+    description: "Cremoso e dourado.",
+    image: "/Fotos/Bacalhau de natas.jpg",
+    variations: createVariations("bacalhau-nas-natas", [
+      { label: "P", price: 280 },
+      { label: "M", price: 480 },
+      { label: "G", price: 880 }
+    ])
+  }),
+  createProduct({
+    id: "bacalhau-a-siqueira",
+    name: "Bacalhau à Siqueira",
+    category: "pratos-principais",
+    subcategory: "Bacalhau",
+    description: "Receita tradicional da casa.",
+    image: "/Fotos/Bacalhau à Siqueira.jpg",
+    variations: createVariations("bacalhau-a-siqueira", [
+      { label: "P", price: 280 },
+      { label: "M", price: 480 },
+      { label: "G", price: 880 }
+    ])
+  }),
+  createProduct({
     id: "paella",
     name: "Paella",
     category: "pratos-principais",
@@ -88,42 +127,6 @@ export const menuProducts: MenuProduct[] = [
     variations: createVariations("arroz-cremoso-de-camarao", [
       { label: "M", size: "1kg", price: 180 },
       { label: "G", size: "1,5kg", price: 240 }
-    ])
-  }),
-  createProduct({
-    id: "bacalhau-a-siqueira",
-    name: "Bacalhau à Siqueira",
-    category: "pratos-principais",
-    subcategory: "Bacalhau",
-    description: "Receita tradicional da casa.",
-    variations: createVariations("bacalhau-a-siqueira", [
-      { label: "P", price: 280 },
-      { label: "M", price: 480 },
-      { label: "G", price: 880 }
-    ])
-  }),
-  createProduct({
-    id: "bacalhau-nas-natas",
-    name: "Bacalhau nas Natas",
-    category: "pratos-principais",
-    subcategory: "Bacalhau",
-    description: "Cremoso e dourado.",
-    variations: createVariations("bacalhau-nas-natas", [
-      { label: "P", price: 280 },
-      { label: "M", price: 480 },
-      { label: "G", price: 880 }
-    ])
-  }),
-  createProduct({
-    id: "bacalhau-a-moda",
-    name: "Bacalhau à Moda",
-    category: "pratos-principais",
-    subcategory: "Bacalhau",
-    description: "Preparação clássica da Navio.",
-    variations: createVariations("bacalhau-a-moda", [
-      { label: "P", price: 280 },
-      { label: "M", price: 480 },
-      { label: "G", price: 880 }
     ])
   }),
   createProduct({

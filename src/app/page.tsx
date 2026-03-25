@@ -71,11 +71,8 @@ export default function HomePage() {
       <div className="pb-20">
         <section className="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-2">
-            <span className="rounded-full border border-[var(--color-gold-500)]/20 bg-[var(--color-gold-500)]/10 px-3 py-1.5 text-xs font-medium text-[var(--color-gold-400)]">
+            <span className="rounded-full border border-[var(--color-gold-500)]/20 bg-[var(--color-gold-500)]/10 px-4 py-2 text-sm font-semibold text-[var(--color-gold-400)]">
               {SITE_CONFIG.campaign.deadline}
-            </span>
-            <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-medium text-slate-300">
-              {SITE_CONFIG.campaign.packaging}
             </span>
           </div>
         </section>

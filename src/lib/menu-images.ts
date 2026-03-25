@@ -2,9 +2,9 @@ import { normalizeText } from "@/lib/utils";
 
 const imageManifest = [
   "Antepasto de polvo e lula.JPG",
-  "Arroz de bacalhau 1111.JPG",
-  "Bacalhau a moda 1.jpg",
-  "Bacalhau de natas 1.jpg",
+  "Arroz de bacalhau.JPG",
+  "Bacalhau de natas.jpg",
+  "Bacalhau à Siqueira.jpg",
   "Bacalhau à moda.JPG",
   "Bacalhoada_Moda.png",
   "bobo-de-camarao-4.png",
@@ -29,7 +29,9 @@ const normalizedImageMap = new Map(
 );
 
 const extraAliases: Record<string, string> = {
-  "bacalhau-a-moda": "/Fotos/Bacalhoada_Moda.png",
+  "bacalhau-a-moda": "/Fotos/Bacalhau à moda.JPG",
+  "bacalhau-a-siqueira": "/Fotos/Bacalhau à Siqueira.jpg",
+  "bacalhau-de-natas": "/Fotos/Bacalhau de natas.jpg",
   "bobo-de-camarao": "/Fotos/bobo-de-camarao-4.png",
   "camarao-ao-thermidor": "/Fotos/camarao-thermidor-2.png",
   "cuscuz-de-camarao": "/Fotos/Cuscuz de Camarão.JPG",

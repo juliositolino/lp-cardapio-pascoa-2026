@@ -7,11 +7,11 @@ export function MenuBanner() {
         <div className="relative aspect-[3.2/1] min-h-[108px] w-full sm:aspect-[4.2/1] md:min-h-[132px]">
           <Image
             src="/campaign-cover.jpeg"
-            alt="Banner do Cardápio Especial de Páscoa"
+            alt="Banner do Cardapio Especial de Pascoa"
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center"
+            className="object-cover object-[68%_center] sm:object-center"
           />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(4,18,33,0.02),rgba(4,18,33,0.08))]" />
         </div>

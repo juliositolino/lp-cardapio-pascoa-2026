@@ -32,7 +32,7 @@ export function Header({
             />
           </div>
           <div className="min-w-0">
-            <p className="truncate font-serif text-base text-white sm:text-lg">
+            <p className="truncate font-serif text-lg text-white sm:text-xl">
               {SITE_CONFIG.brandName}
             </p>
             <p className="text-xs text-slate-400">{SITE_CONFIG.campaign.title}</p>
