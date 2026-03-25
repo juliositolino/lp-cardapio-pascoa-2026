@@ -12,3 +12,5 @@ Fotos/
 /*.jpg
 /*.jpeg
 /*.png
+!public/Fotos/
+!public/Fotos/**
