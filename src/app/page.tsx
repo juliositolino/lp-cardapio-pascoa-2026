@@ -42,7 +42,6 @@ export default function HomePage() {
     if (!product || !variation) return;
 
     addItem(product, variation);
-    setIsCartOpen(true);
   }
 
   function handleCheckout() {
