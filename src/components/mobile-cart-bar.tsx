@@ -1,24 +1,19 @@
 "use client";
 
-import { MessageCircleMore, ShoppingBag } from "lucide-react";
+import { ShoppingBag } from "lucide-react";
 
 import { formatCurrency } from "@/lib/utils";
-import { WhatsAppIcon } from "@/components/whatsapp-icon";
 
 type MobileCartBarProps = {
   totalItems: number;
   subtotal: number;
   onOpen: () => void;
-  onCheckout: () => void;
-  onQuestion: () => void;
 };
 
 export function MobileCartBar({
   totalItems,
   subtotal,
-  onOpen,
-  onCheckout,
-  onQuestion
+  onOpen
 }: MobileCartBarProps) {
   if (totalItems === 0) {
     return null;
@@ -41,19 +36,10 @@ export function MobileCartBar({
         </div>
         <button
           type="button"
-          onClick={onQuestion}
-          className="inline-flex items-center gap-1.5 rounded-full border border-white/10 px-3 py-3 text-xs font-medium text-white"
-        >
-          <WhatsAppIcon className="h-3.5 w-3.5 text-[#25D366]" />
-          Dúvida?
-        </button>
-        <button
-          type="button"
-          onClick={onCheckout}
+          onClick={onOpen}
           className="inline-flex items-center gap-2 rounded-full bg-[var(--color-gold-500)] px-4 py-3 text-sm font-semibold text-slate-950"
         >
-          <MessageCircleMore className="h-4 w-4" />
-          Enviar
+          Finalizar pedido
         </button>
       </div>
     </div>

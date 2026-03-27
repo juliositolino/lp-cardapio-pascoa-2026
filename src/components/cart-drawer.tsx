@@ -50,7 +50,7 @@ export function CartDrawer({
     return (
       <aside
         id="pedido"
-        className="rounded-[1.5rem] border border-white/10 bg-[linear-gradient(180deg,rgba(6,18,31,0.98),rgba(5,15,27,0.98))] p-4 shadow-[0_24px_60px_rgba(0,0,0,0.28)]"
+        className="flex max-h-[calc(100vh-8rem)] flex-col rounded-[1.5rem] border border-white/10 bg-[linear-gradient(180deg,rgba(6,18,31,0.98),rgba(5,15,27,0.98))] p-4 shadow-[0_24px_60px_rgba(0,0,0,0.28)]"
       >
         <DrawerContent
           items={items}
@@ -78,7 +78,7 @@ export function CartDrawer({
 
       <aside
         id="pedido"
-        className={`fixed inset-x-0 bottom-0 z-50 max-h-[88vh] rounded-t-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(6,18,31,0.98),rgba(5,15,27,0.98))] p-4 shadow-[0_-24px_60px_rgba(0,0,0,0.4)] transition lg:hidden ${
+        className={`fixed inset-x-0 bottom-0 z-50 flex max-h-[88vh] flex-col rounded-t-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(6,18,31,0.98),rgba(5,15,27,0.98))] p-4 shadow-[0_-24px_60px_rgba(0,0,0,0.4)] transition lg:hidden ${
           isOpen ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
         }`}
       >
@@ -123,7 +123,7 @@ function DrawerContent({
   onCheckout
 }: DrawerContentProps) {
   return (
-    <>
+    <div className="flex min-h-0 flex-1 flex-col">
       <div className="mb-4 flex items-center gap-3">
         <div className="rounded-full bg-[var(--color-gold-500)]/12 p-3 text-[var(--color-gold-400)]">
           <ShoppingBag className="h-5 w-5" />
@@ -134,7 +134,7 @@ function DrawerContent({
         </div>
       </div>
 
-      <div className="space-y-4 lg:max-h-[calc(100vh-240px)] lg:overflow-y-auto lg:pr-1">
+      <div className="min-h-0 flex-1 space-y-4 overflow-y-auto pr-1">
         {items.length > 0 ? (
           items.map((item) => (
             <CartItem
@@ -175,6 +175,6 @@ function DrawerContent({
           disabled={items.length === 0}
         />
       </div>
-    </>
+    </div>
   );
 }

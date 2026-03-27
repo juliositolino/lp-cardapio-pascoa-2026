@@ -46,19 +46,19 @@ export function Header({
           <button
             type="button"
             onClick={onQuestion}
-            className="hidden items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm font-medium text-white transition hover:bg-white/10 sm:inline-flex"
+            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm font-medium text-white transition hover:bg-white/10"
           >
             <WhatsAppIcon className="h-4 w-4 text-[#25D366]" />
-            Tirar dúvida
+            <span className="sm:hidden">Dúvida</span>
+            <span className="hidden sm:inline">Tirar dúvida</span>
           </button>
           <button
             type="button"
             onClick={onOpenCart}
-            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm font-medium text-white transition hover:bg-white/10"
+            className="hidden items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm font-medium text-white transition hover:bg-white/10 sm:inline-flex"
           >
             <ClipboardList className="h-4 w-4" />
-            <span className="hidden sm:inline">Ver pedido</span>
-            <span className="sm:hidden">Pedido</span>
+            <span>Ver pedido</span>
             {itemCount > 0 ? (
               <span className="rounded-full bg-[var(--color-gold-500)] px-2 py-0.5 text-xs text-slate-950">
                 {itemCount}

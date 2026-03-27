@@ -54,6 +54,14 @@ export default function HomePage() {
   }
 
   function handleOpenCart() {
+    if (window.innerWidth >= 1024) {
+      document.getElementById("pedido")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+      return;
+    }
+
     setIsCartOpen(true);
   }
 
@@ -163,8 +171,6 @@ export default function HomePage() {
         totalItems={totalItems}
         subtotal={subtotal}
         onOpen={() => setIsCartOpen(true)}
-        onCheckout={handleCheckout}
-        onQuestion={handleQuestion}
       />
     </main>
   );
